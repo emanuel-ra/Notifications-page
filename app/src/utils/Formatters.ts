@@ -13,7 +13,7 @@ export function renderContent(name: string, text: string, status: string) {
 
   return `
   <div class="block w-full">
-      <span class="font-bold text-black">${name}</span> 
-      <span class="text-neutral text-sm text-pretty">${content} ${read}</span>  
+      <h2 class="font-bold text-black">${name}</h2> 
+      <blockquote class="text-neutral text-sm text-pretty">${content} ${read}</blockquote>  
   <div> `
 }
