@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Welcome to Astro.'>
-  <main class='flex justify-center items-center bg-light-blue h-dvh'>
+  <main class='flex flex-col justify-center items-center bg-light-blue h-dvh'>
     <Card>
       <div
         slot='header'
@@ -29,5 +29,17 @@ import Layout from '../layouts/Layout.astro'
         <Notifications client:load />
       </div>
     </Card>
+    <footer class='text-xs py-2 text-neutral'>
+      Challenge by <a
+        href='https://www.frontendmentor.io?ref=challenge'
+        target='_blank'
+        >Frontend Mentor</a
+      >. Coded by <a
+        class='font-semibold hover:text-secondary transition ease-in-out'
+        href='https://www.linkedin.com/in/emanuelramirezabarca/'
+        target='_blank'
+        >Tomas Emanuel Ramirez Abarca</a
+      >.
+    </footer>
   </main>
 </Layout>
