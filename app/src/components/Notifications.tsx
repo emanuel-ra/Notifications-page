@@ -10,7 +10,7 @@ export const Notifications = () => {
 
   return (
     <>
-      <ul className='flex flex-col gap-y-3.5 p-4'>
+      <ul className='flex flex-col gap-y-2 p-4'>
         {notifications.map((item, index) => (
           <li key={index}>
             {item.action === 'commented' && (
