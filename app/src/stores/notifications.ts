@@ -16,7 +16,6 @@ export const useNotificationStore = create<Store>()(
                 clone.map(element => {
                     element.status = 'read'
                 })
-
                 set({notifications:clone})
             }
         }
