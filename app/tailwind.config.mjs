@@ -7,7 +7,8 @@ export default {
 				primary:'hsl(1, 90%, 64%)',
 				secondary:'hsl(219, 85%, 26%)' ,				
 				neutral:'hsl(219, 12%, 42%)',
-				'light-blue':'hsl(211, 68%, 94%)'
+				'light-blue':'hsl(211, 68%, 94%)' ,
+				light:'hsl(210, 60%, 98%)'
 			}
 		},
 	},
