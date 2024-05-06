@@ -4,14 +4,15 @@ import { Avatar } from './Avatar'
 
 interface Props {
   data: Notification
+  className?: string
 }
 
 export const MessageNotification = (props: Props) => {
-  const { data } = props
+  const { data, className } = props
   const { avatar, name, notification, time, status, message } = data
   return (
     <article
-      className={`flex gap-x-2 p-4 rounded ${
+      className={`flex gap-x-2 p-4 rounded ${className} ${
         status === 'unread' && 'bg-light-blue'
       }`}
     >
