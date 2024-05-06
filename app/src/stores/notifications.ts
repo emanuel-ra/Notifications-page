@@ -3,14 +3,22 @@ import type { Notification } from "../data/notifications";
 import { notifications } from "../data/notifications";
 interface Store {
     notifications:Notification[]
-    MarkAllAsRead:()=>void
+    setMarkAllAsRead:()=>void
 }
 
 export const useNotificationStore = create<Store>()(
-   (set) => {
+   (set,get) => {
         return {
             notifications:notifications,
-            MarkAllAsRead:()=>{}
+            setMarkAllAsRead:()=>{
+                const { notifications } = get()
+                const clone = structuredClone(notifications)
+                clone.map(element => {
+                    element.status = 'read'
+                })
+
+                set({notifications:clone})
+            }
         }
     }
 )
